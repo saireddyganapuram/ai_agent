@@ -49,7 +49,6 @@ const Project = () => {
         : [...prevSelected, id]
     );
   };
-
   const addCollaborator = () => {
     axiosInstance.put('/projects/add',{
       projectId: location.state.project._id,
