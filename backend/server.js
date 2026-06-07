@@ -63,6 +63,12 @@ io.on('connection', socket => {
     if (aiIsPresentInMessage) {
       const senderId = data.sender._id;
 
+      // Broadcast the user's prompt message containing @ai to the room
+      io.to(socket.roomId).emit('project-message', {
+        ...data,
+        timestamp: new Date()
+      });
+
       const prompt = message.replace('@ai', '');
 
       const result = await generateResult(prompt);
