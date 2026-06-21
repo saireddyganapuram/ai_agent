@@ -31,7 +31,7 @@ A full-stack MERN application that enables real-time collaborative development w
 - **Real-time**: Socket.io 4.8.1
 - **Authentication**: JWT (jsonwebtoken) + bcrypt
 - **Caching**: Redis (ioredis) for token blacklisting
-- **AI Integration**: Google Generative AI (Gemini 1.5 Flash)
+- **AI Integration**: Google Generative AI (Gemini 2.5 Flash)
 - **Validation**: express-validator
 - **Logging**: Morgan
 
@@ -151,9 +151,9 @@ AI_Agent/
 ## 🤖 AI Integration
 
 ### Google Gemini AI Configuration
-- **Model**: gemini-1.5-flash
+- **Model**: gemini-2.5-flash
 - **Response Format**: JSON
-- **System Instruction**: MERN stack expert with 10 years experience
+- **System Instruction**: MERN stack expert with 15 years experience
 - **Capabilities**:
   - Generates modular, well-commented code
   - Creates complete file structures
@@ -237,12 +237,13 @@ AI_Agent/
 
 3. **Create `.env` file**
    ```env
-   PORT=3000
+   PORT=8080
    MONGODB_URI=mongodb://localhost:27017/ai_agent
    JWT_SECRET=your_jwt_secret_key_here
    GEMINI_API_KEY=your_gemini_api_key_here
-   REDIS_HOST=localhost
-   REDIS_PORT=6379
+   REDIS_HOST=your_redis_host
+   REDIS_PORT=your_redis_port
+   REDIS_PASSWORD=your_redis_password
    ```
 
 4. **Start Redis server**
@@ -340,12 +341,13 @@ AI_Agent/
 
 ### Backend (.env)
 ```env
-PORT=3000
+PORT=8080
 MONGODB_URI=mongodb://localhost:27017/ai_agent
 JWT_SECRET=your_secret_key
 GEMINI_API_KEY=your_gemini_api_key
-REDIS_HOST=localhost
-REDIS_PORT=6379
+REDIS_HOST=your_redis_host
+REDIS_PORT=your_redis_port
+REDIS_PASSWORD=your_redis_password
 ```
 
 ### Frontend (.env)
